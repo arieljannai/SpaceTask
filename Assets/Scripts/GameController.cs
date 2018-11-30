@@ -12,8 +12,8 @@ public class GameController : MonoBehaviour {
 	void Start()
 	{
         // TODO: check why it's throwing an error
-        this.PutRandomResourcesOnScreen("meteor", NUMBER_OF_OBSTACLES);
-        this.PutRandomResourcesOnScreen("collect-1", NUMBER_OF_BROKEN_PARTS);
+        //this.PutRandomResourcesOnScreen("meteor", NUMBER_OF_OBSTACLES);
+        //this.PutRandomResourcesOnScreen("collect-1", NUMBER_OF_BROKEN_PARTS);
     }
 	
 	void Update()

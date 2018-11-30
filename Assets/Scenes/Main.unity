@@ -208,7 +208,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 173848938}
   background: {fileID: 2056337549}
+  borderUp: {fileID: 1664799159}
+  borderDown: {fileID: 1655128770}
+  borderRight: {fileID: 1299728441}
+  borderLeft: {fileID: 627461260}
   selfCamera: {fileID: 88545688}
+  leftmostX: 0
+  rightmostX: 16
 --- !u!1 &173848938
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +226,7 @@ GameObject:
   - component: {fileID: 173848940}
   - component: {fileID: 173848941}
   - component: {fileID: 173848943}
+  - component: {fileID: 173848945}
   - component: {fileID: 173848942}
   - component: {fileID: 173848944}
   m_Layer: 0
@@ -366,7 +373,7 @@ CapsuleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173848938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -375,6 +382,31 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.26, y: 3.24}
   m_Direction: 0
+--- !u!61 &173848945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173848938}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.018039703, y: 0.09019756}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.26, y: 3.24}
+    newSize: {x: 2.26, y: 3.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.151763, y: 2.8671846}
+  m_EdgeRadius: 0
 --- !u!1 &558865215
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,8 +559,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627461260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5000, z: 1}
+  m_LocalPosition: {x: -20.102, y: 0.31, z: 0}
+  m_LocalScale: {x: 5, y: 600, z: 1}
   m_Children: []
   m_Father: {fileID: 2056337550}
   m_RootOrder: 3
@@ -811,7 +843,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.071306705, y: -3.5580316}
+  m_Offset: {x: -0.036488533, y: -3.5580316}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -822,7 +854,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.09198, y: 0.4839363}
+  m_Size: {x: 20.750883, y: 0.4839363}
   m_EdgeRadius: 0
 --- !u!50 &1068326476
 Rigidbody2D:
@@ -868,8 +900,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299728441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5000, z: 1}
+  m_LocalPosition: {x: 20.104, y: 0.057, z: 0}
+  m_LocalScale: {x: 5, y: 600, z: 1}
   m_Children: []
   m_Father: {fileID: 2056337550}
   m_RootOrder: 2
@@ -1010,8 +1042,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1655128770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -11.5, z: 0}
-  m_LocalScale: {x: 5000, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: -11.37, z: 0}
+  m_LocalScale: {x: 1050, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 2056337550}
   m_RootOrder: 1
@@ -1109,8 +1141,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1664799159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.5, z: 0}
-  m_LocalScale: {x: 5000, y: 5, z: 1}
+  m_LocalPosition: {x: -0.01, y: 11.37, z: 0}
+  m_LocalScale: {x: 1050, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 2056337550}
   m_RootOrder: 0
@@ -1377,7 +1409,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2056337549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9499993, y: 0, z: 0}
+  m_LocalPosition: {x: 7.996, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1664799160}
